@@ -108,13 +108,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\kaneshiro.png" />
     <Content Include="Global.asax" />
+    <Content Include="Samples\01-FormAndPreview\FormAndPreview.html" />
     <Content Include="Samples\03-Resource\blogServiceViaJQuery.js" />
     <Content Include="Samples\03-Resource\blogServiceViaResource.js" />
     <Content Include="Samples\03-Resource\crud.html" />
     <Content Include="Samples\03-Resource\blogController.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="packages.config" />
     <Content Include="Scripts\angular-resource.min.js.map" />
