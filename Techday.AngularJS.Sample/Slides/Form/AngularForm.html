@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../../Content/kendo/2014.2.716/kendo.common-bootstrap.core.min.css" rel="stylesheet" />
+    <link href="../../Content/kendo/2014.2.716/kendo.bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .form-control {
+            width: 100%;
+            padding: 0;
+        }
+
+        .k-numeric-wrap input[type=text] {
+            margin-top: -32px;
+        }
+    </style>
+    <title>Angular Form</title>
+</head>
+<body>
+    <div class="container" ng-controller="MainController as mainCtrl">
+        <h2>Product Information</h2>
+        <form role="form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name"
+                       ng-model="mainCtrl.name">
+            </div>
+            <div class="form-group">
+                <label for="createdate">Create Date:</label>
+                <input type="text" class="form-control" id="createdate"
+                       ng-model="mainCtrl.createdate"
+                       kendo-date-picker k-format="'yyyy/MM/dd'">
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="text" class="form-control" id="price"
+                       ng-model="mainCtrl.price"
+                       kendo-numeric-text-box>
+            </div>
+            <div class="form-group">
+                <label for="cost">Cost:</label>
+                <input type="text" class="form-control" id="cost"
+                       ng-model="mainCtrl.cost"
+                       kendo-numeric-text-box>
+            </div>
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <input type="text" class="form-control" id="color"
+                       kendo-color-picker ng-model="mainCtrl.color">
+            </div>
+
+            <button type="button" class="btn btn-primary"
+                    ng-click="mainCtrl.submit()">
+                Submit
+            </button>
+
+        </form>
+    </div>
+    <script src="../../Scripts/jquery-1.9.1.js"></script>
+    <script src="../../Scripts/angular.js"></script>
+    <script src="../../Scripts/kendo/2014.2.716/kendo.core.min.js"></script>
+    <script src="../../Scripts/kendo/2014.2.716/kendo.ui.core.min.js"></script>
+    <script src="../../Scripts/kendo/2014.2.716/kendo.numerictextbox.min.js"></script>
+    <script src="../../Scripts/kendo/2014.2.716/kendo.datepicker.min.js"></script>
+    <script src="../../Scripts/kendo/2014.2.716/kendo.colorpicker.min.js"></script>
+    <script src="../../Scripts/kendo/2014.2.716/kendo.angular.min.js"></script>
+    <script>
+        var app = angular.module('app', ['kendo.directives']);
+
+        app.controller('MainController',
+
+            function MainController($scope) {
+                var self = this;
+                self.name = '';
+                self.createdate = '';
+                self.price = 0;
+                self.cost = 0;
+                self.color = '#ffffff';
+
+                self.submit = function () {
+                    var product = {
+                        name: self.name,
+                        createdate: self.createdate,
+                        price: self.price,
+                        cost: self.cost,
+                        color: self.color
+                    }
+
+                    console.log(product);
+                }
+            }
+        );
+    </script>
+
+
+
+
+</body>
+
+</html>
