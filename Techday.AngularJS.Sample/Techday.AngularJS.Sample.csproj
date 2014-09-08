@@ -116,6 +116,7 @@
     <Content Include="Samples\03-Resource\blogServiceViaResource.js" />
     <Content Include="Samples\03-Resource\crud.html" />
     <Content Include="Samples\03-Resource\blogController.js" />
+    <Content Include="Samples\04-ComplexForm\ComplexForm.html" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
