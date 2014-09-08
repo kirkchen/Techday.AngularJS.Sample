@@ -111,6 +111,7 @@
     <Content Include="Content\kaneshiro.png" />
     <Content Include="Global.asax" />
     <Content Include="Samples\01-FormAndPreview\FormAndPreview.html" />
+    <Content Include="Samples\02-ProductPage\ProductPage.html" />
     <Content Include="Samples\03-Resource\blogServiceViaJQuery.js" />
     <Content Include="Samples\03-Resource\blogServiceViaResource.js" />
     <Content Include="Samples\03-Resource\crud.html" />
