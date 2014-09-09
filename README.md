@@ -1,25 +1,30 @@
-# Techday 2014 AngularJS Session Sample
+# TechDay 2014 Angular JS Sample Code
 
-DEV204 - AngularJS Sample
+此Repository是Techday 2014課程的範例程式碼
 
-## The MIT License (MIT)
+> DEV204 - 使用 AngularJS 在 ASP.NET 專案上開發企業水準的應用
 
-Copyright (c) 2014 Tim Schlechter
+## 範例程式碼
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. 海報編輯器 - Two Way Binding & Directive
+1. 產品列表 - 抽換資料來源
+1. 部落格 - 使用$resource開發CRUD
+1. 自動化測試 - protractor
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Protractor使用說明
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE. 
+1. 安裝npm package
+ 
+		npm install
+1. 更新WebDriver-Manager
+
+		webdriver-manager update
+
+1. 啟動selenium server
+
+		webdriver-manager start
+
+1. 啟動protractor via grunt
+
+		grunt  
+
