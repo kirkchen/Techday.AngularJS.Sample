@@ -112,6 +112,9 @@
     <Content Include="Global.asax" />
     <Content Include="gruntfile.js" />
     <Content Include="Samples\01-FormAndPreview\FormAndPreview.html" />
+    <Content Include="Samples\02-ProductPage\ProductController.js" />
+    <Content Include="Samples\02-ProductPage\ProductDataService.js" />
+    <Content Include="Samples\02-ProductPage\ProductDataServiceFake.js" />
     <Content Include="Samples\02-ProductPage\ProductPage.html" />
     <Content Include="Samples\03-Resource\blogServiceViaJQuery.js" />
     <Content Include="Samples\03-Resource\blogServiceViaResource.js" />
@@ -819,6 +822,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BlogsController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -829,6 +833,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\BlogDbContext.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
