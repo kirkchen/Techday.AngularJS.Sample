@@ -117,6 +117,7 @@
     <Content Include="Samples\03-Resource\crud.html" />
     <Content Include="Samples\03-Resource\blogController.js" />
     <Content Include="Samples\04-ComplexForm\ComplexForm.html" />
+    <Content Include="Samples\04-ComplexForm\spec\complexform.spec.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
@@ -126,6 +127,7 @@
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="packages.config" />
     <Content Include="Scripts\angular-resource.min.js.map" />
+    <Content Include="protractor.conf.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
