@@ -1,6 +1,6 @@
 ﻿app.service('BlogService', BlogService);
 
-function BlogService($resource) {
+function BlogService() {
     var self = this;
 
     self.apiUrl = '/api/Blogs/';
