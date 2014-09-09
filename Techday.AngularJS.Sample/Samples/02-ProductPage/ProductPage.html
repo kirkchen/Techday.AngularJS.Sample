@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../Content/bootstrap-theme.css" rel="stylesheet" />
+    <style>
+        .form-control {
+            width: 100%;
+            padding: 0;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <div class="container" ng-controller="ProductController">
+        <div class="row" style="padding-top: 50px;">
+            <div class="btn-group">
+                <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Left'"><span class="glyphicon glyphicon-list"></span></label>
+                <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Middle'"><span class="glyphicon glyphicon-th"></span></label>
+            </div>
+        </div>
+
+        <div class="row" style="padding-top: 20px;" ng-repeat="product in products">
+            <div class="col-sm-3">
+                <img ng-src="{{ product.image }}" alt="..." class="img-thumbnail">
+            </div>
+            <div class="col-sm-9">
+                <h3><strong>{{ product.title }}</strong></h3>
+                <p>
+                    {{ product.desc }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../Scripts/angular.js"></script>
+    <script src="../../Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="../../Scripts/angular-ui/ui-bootstrap.js"></script>
+
+    <!-- 假資料來源，API好之前使用 -->
+    <!--<script src="scripts/productDataServiceFake.js"></script>-->
+    <!-- 真的呼叫Api取得資料 -->
+    <!--<script src="scripts/productDataService.js"></script>-->
+
+    <script>
+        var app = angular.module('app', ['ui.bootstrap', 'ui.bootstrap.tpls']);
+
+        //// Fake, For Test
+        app.service('ProductDataService', function ($q) {
+            var self = this;
+
+            self.getProducts = function () {
+
+                var defer = $q.defer();
+
+                var data = [];
+                for (var i = 0; i < 10; i++) {
+                    var item = {
+                        image: 'http://lorempixel.com/200/200/sports/' + i,
+                        title: '產品' + i,
+                        desc: ' 產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容產品內容'
+                    }
+
+                    data.push(item);
+                }
+
+                defer.resolve(data);
+
+                return defer.promise;
+            }
+        });
+
+        ////// Real, Call Api
+        //app.service('ProductDataService', function ($q, $http) {
+        //    var self = this;
+
+        //    self.getProducts = function () {
+        //        var defer = this.$q.defer();
+        //        var url = '/api/Product/getProducts';
+
+        //        this.$http.get(url)
+        //            .success(function (result) {
+        //                if (result.isSuccess) {
+        //                    defer.resolve(result.Data);
+        //                }
+        //                else {
+        //                    defer.reject();
+        //                }
+        //            })
+        //            .error(defer.reject);
+
+        //        return defer.promise;
+        //    }
+        //});
+
+
+        app.controller('ProductController',
+            function ($scope, ProductDataService) {
+
+            $scope.products = [];
+
+            ProductDataService.getProducts()
+                .then(function (data) {
+                    $scope.products = data;
+                });
+        });
+
+    </script>
+
+</body>
+</html>
