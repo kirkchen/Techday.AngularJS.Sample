@@ -110,6 +110,7 @@
   <ItemGroup>
     <Content Include="Content\kaneshiro.png" />
     <Content Include="Global.asax" />
+    <Content Include="gruntfile.js" />
     <Content Include="Samples\01-FormAndPreview\FormAndPreview.html" />
     <Content Include="Samples\02-ProductPage\ProductPage.html" />
     <Content Include="Samples\03-Resource\blogServiceViaJQuery.js" />
@@ -128,6 +129,7 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\angular-resource.min.js.map" />
     <Content Include="protractor.conf.js" />
+    <Content Include="package.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
