@@ -4,6 +4,11 @@
 
 > DEV204 - 使用 AngularJS 在 ASP.NET 專案上開發企業水準的應用
 
+影片連結：
+
+[DEV204 | 使用 AngularJS 在 ASP.NET 專案上開發企業水準的應用 - 微軟虛擬學院MVA](http://www.microsoftvirtualacademy.com/training-courses/techdays-taiwan-2014-breakout-sessions-dev)
+
+
 ## 範例程式碼
 
 1. 海報編輯器 - Two Way Binding & Directive
